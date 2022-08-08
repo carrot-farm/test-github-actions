@@ -1,0 +1,10 @@
+name: cling-wash
+on:
+  push:
+
+jobs:
+  a:
+    runs-on: ubuntu-18.04
+    steps: 
+      - name: a
+        run: echo a
