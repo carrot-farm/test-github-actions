@@ -14,6 +14,24 @@ jobs:
     steps: 
       - run: echo b
 
+  b-1:
+    needs: a
+    runs-on: ubuntu-18.04
+    steps: 
+      - run: echo b-1
+
+  b-2:
+    needs: a
+    runs-on: ubuntu-18.04
+    steps: 
+      - run: echo b-2
+
+  b-3:
+    needs: a
+    runs-on: ubuntu-18.04
+    steps: 
+      - run: echo b-3
+
   c:
     needs: b
     runs-on: ubuntu-18.04
