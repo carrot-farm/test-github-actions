@@ -6,5 +6,16 @@ jobs:
   a:
     runs-on: ubuntu-18.04
     steps: 
-      - name: a
-        run: echo a
+      - run: echo a
+
+  b:
+    needs: a
+    runs-on: ubuntu-18.04
+    steps: 
+      - run: echo b
+
+  c:
+    needs: b
+    runs-on: ubuntu-18.04
+    steps: 
+      - run: echo c
